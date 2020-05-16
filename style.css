@@ -1,56 +1,85 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background: #e5e5e5;
     color: #25282B;
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    
 }
 
-body #container{
+body #container {
     width: 90%;
     max-width: 980px;
     margin: 40px auto;
     display: flex;
 
-
 }
 
-a{
+body.hideScroll{
+    overflow: hidden;
+}
+a {
     color: #ff5E84;
     font-weight: bold;
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     text-decoration: underline;
 }
 
-p, .description{
+p,
+.description {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.1px;
 }
-.intro{
-    width: 300px;
-    margin-right: 20px;
+
+.button {
+    background: #ff5E84;
+    color: white;
+
+    width: 150px;
+    height: 40px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    box-shadow: 0px 8px 16px rgba(255, 0, 92, 0.16);
 }
 
-main{
+.button:hover{
+    background-color: #0984e3;
+    text-decoration: none;
+}
+
+
+#intro {
+    width: 300px;
+    margin-right: 64px;
+}
+
+main {
     margin: 32px 0;
 }
 
-#buttons{
+#buttons {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 32px;
 }
 
-button{
+button {
     background: none;
     color: #ff5E84;
     border: none;
@@ -62,24 +91,13 @@ button{
     outline: none;
 }
 
-button:hover{
+button:hover {
     text-decoration: underline;
 }
 
-.fat{
-    color: white;
-    background: #ff5E84;
-    width: 150px;
-    height: 40px;
-    border-radius: 6px;
-    box-shadow: 0px 8px 16px rgba(255, 0, 92, 0.16);
-}
 
-button.fat{
-    text-decoration: none;
-}
 
-footer{
+footer {
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
@@ -88,11 +106,11 @@ footer{
     color: #777;
 }
 
-footer a{
+footer a {
     opacity: 0.7;
 }
 
-.idea{
+.idea {
     display: flex;
 
     background-color: #fff;
@@ -102,34 +120,35 @@ footer a{
     margin-bottom: 32px;
 }
 
-.idea img{
+.idea img {
     width: 60px;
     height: 60px;
     margin-right: 32px;
 
 }
 
-.idea h3{
+.idea h3 {
     margin: 0;
 }
 
-.idea p{
+.idea p {
     margin: 8px 0;
     color: #777;
 }
 
-.idea .description{
+.idea .description {
     margin: 16px 0;
 }
 
 /* MODAL */
 
-#modal{
-    background-color: #ff5E84; 
+#modal {
+    background-color: #ff5E84;
     position: absolute;
     top: 0;
-    width: 100vw;
-    height: 100vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
     display: flex;
     justify-content: center;
@@ -137,21 +156,25 @@ footer a{
     transition: 400ms;
 }
 
-#modal .content{
-    margin-top: 128px;
+#modal.addScroll{
+    overflow: auto;
+}
+
+#modal .content {
+    margin-top: 10%;
     color: white;
 }
 
-#modal .content h1{
+#modal .content h1 {
     text-align: center;
     text-transform: uppercase;
 }
 
-#modal form{
+#modal form {
     width: 80%;
     max-width: 800px;
 
-    margin: 0 auto;
+    margin: 0 auto 10%;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -160,11 +183,12 @@ footer a{
 
 .content form div:nth-child(3),
 .content form div:nth-child(4),
-.content form div:nth-child(5){
+.content form div:nth-child(5) {
     grid-column: span 2;
 }
+
 form input,
-form textarea{
+form textarea {
     width: 100%;
     padding: 12px;
     border-radius: 6px;
@@ -174,13 +198,13 @@ form textarea{
     font-size: 16px;
 }
 
-form label{
+form label {
     font-weight: 600;
     line-height: 32px;
     letter-spacing: 0.8px;
 }
 
-form a{
+form a {
     width: 150px;
     height: 40px;
     background-color: #ffffff22;
@@ -196,13 +220,13 @@ form a{
     transition: 400ms;
 }
 
-form a:hover{
+form a:hover {
     background-color: #fff;
     color: #ff5E84;
     text-decoration: none;
 }
 
-form button{
+form button {
     background: white;
     width: 150px;
     height: 40px;
@@ -218,13 +242,78 @@ form button{
 
 }
 
-form button:hover{
+form button:hover {
     background-color: #098483;
     color: white;
     text-decoration: none;
 }
 
-#modal.hide{
+#modal.hide {
     opacity: 0;
     visibility: hidden;
+}
+
+/* Ideia.html */
+#page-ideias #container {
+    display: block;
+}
+
+#page-ideias header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#page-ideias nav {
+    display: flex;
+    align-items: center;
+}
+
+#page-ideias nav li {
+    list-style-type: none;
+    margin-right: 16px;
+}
+
+#page-ideias nav li a{
+    color: #25282B;
+}
+
+#page-ideias nav li a.button{
+    color: white;
+}
+
+#page-ideias nav li:last-child {
+    margin: 0;
+}
+
+section#title{
+    text-align: center;
+}
+
+
+section#title p{
+    opacity: 0.7;
+    margin: 0;
+}
+
+
+section#title h1{
+    margin: 0;
+    font-size: 28px;
+
+}
+
+section#ideas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+section#ideas .idea{
+    margin: 0;
+}
+
+section#title,
+section#ideas,
+footer {
+    margin-top: 64px;
 }
