@@ -1,2 +1,2 @@
 # Casa Criativa
-## Projeto criado no curso disponibilizado pela RocketSeat no youtube.
+## Projeto criado no curso disponibilizado pela Rocketseat no youtube, playlist> WorkshopDev Especial (https://www.youtube.com/playlist?list=PL85ITvJ7FLohGTWaE_p0J6B-TLmQbN4ka)
