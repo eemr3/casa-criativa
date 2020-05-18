@@ -140,6 +140,13 @@ footer a {
     margin: 16px 0;
 }
 
+.idea a{
+    margin-right: 30px;
+}
+.idea .idea-delete{
+    margin-right: 0;
+    color: #25282B;
+}
 /* MODAL */
 
 #modal {
